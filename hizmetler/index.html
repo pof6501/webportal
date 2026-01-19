@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hizmetlerimiz - Webportal Google Reklam Ajansı</title>
+    <meta name="description" content="Google Ads reklam yönetimi, SEO optimizasyonu, web tasarımı, sosyal medya yönetimi ve dijital pazarlama hizmetlerimiz. 0545 194 40 26">
+    <meta name="keywords" content="google reklam hizmetleri, seo hizmetleri, web tasarım, sosyal medya yönetimi, dijital pazarlama">
+    <meta name="author" content="Webportal Reklam Ajansı">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Hizmetlerimiz - Webportal Google Reklam Ajansı">
+    <meta property="og:description" content="Google Ads, SEO, web tasarımı ve dijital pazarlama hizmetleri">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3a0ca3;
+            --accent: #f72585;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --success: #4cc9f0;
+            --gradient: linear-gradient(135deg, #4361ee, #3a0ca3);
+            --gradient-accent: linear-gradient(135deg, #f72585, #b5179e);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 70px;
+            height: 4px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            box-shadow: var(--shadow);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(67, 97, 238, 0.25);
+        }
+
+        .btn-accent {
+            background: var(--gradient-accent);
+        }
+
+        .btn-accent:hover {
+            box-shadow: 0 15px 30px rgba(247, 37, 133, 0.25);
+        }
+
+        /* Header Styles */
+        header {
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 15px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-left: 30px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary);
+        }
+
+        .nav-menu a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: var(--gradient);
+            left: 0;
+            bottom: -5px;
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover:after {
+            width: 100%;
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 140px 0 40px;
+            background: var(--light-gray);
+        }
+
+        .breadcrumb-links {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .breadcrumb-links a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .breadcrumb-links a:hover {
+            color: var(--primary);
+        }
+
+        .breadcrumb-links span {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        /* Services Hero */
+        .services-hero {
+            padding: 60px 0 100px;
+            background-color: white;
+        }
+
+        .services-hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 5px solid var(--primary);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-top: 5px solid var(--accent);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .service-features {
+            list-style: none;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .service-features li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .service-features li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        /* Service Detail Sections */
+        .service-detail {
+            padding: 100px 0;
+            background-color: var(--light-gray);
+        }
+
+        .service-detail:nth-child(even) {
+            background-color: white;
+        }
+
+        .detail-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .detail-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .detail-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            display: inline-block;
+        }
+
+        .section-title h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 2px solid var(--light-gray);
+            transition: var(--transition);
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--primary);
+            transform: scale(1.05);
+            position: relative;
+        }
+
+        .pricing-card.featured:before {
+            content: 'POPÜLER';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-accent);
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .pricing-header {
+            margin-bottom: 30px;
+        }
+
+        .price {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .price-period {
+            color: var(--gray);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .pricing-features li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        /* Process Section */
+        .process {
+            padding: 100px 0;
+            background-color: var(--light-gray);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .step {
+            background: white;
+            border-radius: var(--radius);
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            box-shadow: var(--shadow);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--light-gray);
+            border-radius: var(--radius);
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background: #e2e6ea;
+        }
+
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer.active {
+            padding: 0 25px 25px;
+            max-height: 500px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background-color: var(--light-gray);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info h2 {
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--radius);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 70px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .footer-about p {
+            color: #aaa;
+        }
+
+        .footer-links h3, .footer-services h3, .footer-contact h3 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            color: white;
+        }
+
+        .footer-links ul, .footer-services ul {
+            list-style: none;
+        }
+
+        .footer-links li, .footer-services li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a, .footer-services a {
+            color: #aaa;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover, .footer-services a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .footer-contact p {
+            color: #aaa;
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: #333;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Floating Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+        }
+
+        .phone-btn {
+            background: var(--primary);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            .detail-container, .contact-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 50px;
+                transition: var(--transition);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-menu li {
+                margin: 0 0 30px 0;
+            }
+            
+            .floating-buttons {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .floating-btn {
+                width: 55px;
+                height: 55px;
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .btn {
+                padding: 12px 25px;
+                font-size: 0.9rem;
+            }
+            
+            .service-card, .contact-form {
+                padding: 30px 20px;
+            }
+            
+            .floating-buttons {
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">WEBPORTAL</a>
+            
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
+                <li><a href="portfolyo.html">Portfolyo</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-links">
+                <a href="index.html">Anasayfa</a>
+                <i class="fas fa-chevron-right" style="color: var(--gray);"></i>
+                <span>Hizmetlerimiz</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Hero -->
+    <section class="services-hero">
+        <div class="container">
+            <div class="services-hero-content">
+                <h1>Hizmetlerimiz</h1>
+                <p>İşletmenizin dijital dünyada başarılı olması için ihtiyaç duyduğu tüm hizmetleri tek çatı altında sunuyoruz. Google Premier Partner sertifikalı ajansımızla, reklam bütçenizi en verimli şekilde kullanmanızı sağlıyoruz.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ad"></i>
+                    </div>
+                    <h3>Google Reklam Yönetimi</h3>
+                    <p>Arama, Display, Shopping ve YouTube reklam kampanyalarınızı profesyonel şekilde yönetiyor ve optimize ediyoruz.</p>
+                    <ul class="service-features">
+                        <li>Kampanya stratejisi oluşturma</li>
+                        <li>Anahtar kelime araştırması</li>
+                        <li>Reklam metni yazımı</li>
+                        <li>Günlük optimizasyon</li>
+                        <li>Aylık performans raporlaması</li>
+                    </ul>
+                    <a href="iletisim.html" class="btn" style="margin-top: 20px;">Detaylı Bilgi</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>SEO Optimizasyonu</h3>
+                    <p>Web sitenizin Google'da üst sıralarda çıkması için teknik, içerik ve backlink SEO çalışmaları yapıyoruz.</p>
+                    <ul class="service-features">
+                        <li>Teknik SEO audit</li>
+                        <li>Anahtar kelime analizi</li>
+                        <li>İçerik stratejisi</li>
+                        <li>Backlink oluşturma</li>
+                        <li>Performans takibi</li>
+                    </ul>
+                    <a href="iletisim.html" class="btn" style="margin-top: 20px;">Detaylı Bilgi</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Web Site Tasarımı</h3>
+                    <p>Modern, responsive ve SEO uyumlu web siteleri tasarlayarak dijital varlığınızı güçlendiriyoruz.</p>
+                    <ul class="service-features">
+                        <li>UI/UX tasarım</li>
+                        <li>Responsive tasarım</li>
+                        <li>SEO uyumlu yapı</li>
+                        <li>Hızlı yükleme süresi</li>
+                        <li>Teknik destek</li>
+                    </ul>
+                    <a href="iletisim.html" class="btn" style="margin-top: 20px;">Detaylı Bilgi</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <h3>Sosyal Medya Yönetimi</h3>
+                    <p>Facebook, Instagram, LinkedIn ve Twitter reklamları ile sosyal medya hesaplarınızı profesyonelce yönetiyoruz.</p>
+                    <ul class="service-features">
+                        <li>Sosyal medya stratejisi</li>
+                        <li>İçerik üretimi</li>
+                        <li>Reklam kampanyaları</li>
+                        <li>Topluluk yönetimi</li>
+                        <li>Performans analizi</li>
+                    </ul>
+                    <a href="iletisim.html" class="btn" style="margin-top: 20px;">Detaylı Bilgi</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Reklam Analiz & Raporlama</h3>
+                    <p>Reklam performansınızı detaylı analiz edip düzenli raporlarla kampanyalarınızın verimliliğini artırıyoruz.</p>
+                    <ul class="service-features">
+                        <li>Google Analytics kurulumu</li>
+                        <li>KPI belirleme</li>
+                        <li>Haftalık raporlama</li>
+                        <li>Performans analizi</li>
+                        <li>Optimizasyon önerileri</li>
+                    </ul>
+                    <a href="iletisim.html" class="btn" style="margin-top: 20px;">Detaylı Bilgi</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Reklam Üretimi</h3>
+                    <p>YouTube ve sosyal medya platformları için etkili video reklam içerikleri hazırlıyoruz.</p>
+                    <ul class="service-features">
+                        <li>Video konsepti oluşturma</li>
+                        <li>Profesyonel çekim</li>
+                        <li>Video kurgu ve efekt</li>
+                        <li>Optimizasyon</li>
+                        <li>Yayın yönetimi</li>
+                    </ul>
+                    <a href="iletisim.html" class="btn" style="margin-top: 20px;">Detaylı Bilgi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Ads Service Detail -->
+    <section class="service-detail">
+        <div class="container">
+            <div class="detail-container">
+                <div>
+                    <h2>Google Ads Reklam Yönetimi</h2>
+                    <p>Google Premier Partner sertifikalı uzman ekibimizle, Google Ads platformunda maksimum verim alacağınız reklam kampanyaları oluşturuyoruz.</p>
+                    <p>Her işletmenin hedef kitlesi, bütçesi ve beklentileri farklıdır. Bu nedenle, her müşterimiz için özel stratejiler geliştiriyor, kampanyalarını sürekli optimize ediyoruz.</p>
+                    <ul class="service-features">
+                        <li>Arama ağı reklamları ile üst sıralarda çıkın</li>
+                        <li>Display reklamları ile marka bilinirliğinizi artırın</li>
+                        <li>Shopping reklamları ile online satışlarınızı artırın</li>
+                        <li>Video reklamları ile hedef kitlenize ulaşın</li>
+                        <li>Google Haritalar'da lokal işletmenizi öne çıkarın</li>
+                    </ul>
+                    <a href="iletisim.html" class="btn" style="margin-top: 20px;">Ücretsiz Danışmanlık Alın</a>
+                </div>
+                <div class="detail-image">
+                    <div style="width: 100%; height: 400px; background: var(--gradient); display: flex; align-items: center; justify-content: center;">
+                        <i class="fab fa-google" style="font-size: 8rem; color: white; opacity: 0.8;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Service Detail -->
+    <section class="service-detail">
+        <div class="container">
+            <div class="detail-container">
+                <div class="detail-image">
+                    <div style="width: 100%; height: 400px; background: var(--gradient); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-search-location" style="font-size: 8rem; color: white; opacity: 0.8;"></i>
+                    </div>
+                </div>
+                <div>
+                    <h2>SEO Optimizasyonu</h2>
+                    <p>Organik trafik, dijital pazarlamanın en değerli trafik kaynağıdır. Web sitenizin Google'da üst sıralarda çıkması için kapsamlı SEO çalışmaları yapıyoruz.</p>
+                    <p>Teknik SEO, içerik optimizasyonu ve backlink çalışmaları ile web sitenizin arama motorlarında görünürlüğünü artırıyor, uzun vadeli organik trafik kazanmanızı sağlıyoruz.</p>
+                    <ul class="service-features">
+                        <li>Teknik SEO audit ve iyileştirmeler</li>
+                        <li>Anahtar kelime araştırması ve stratejisi</li>
+                        <li>İçerik optimizasyonu ve yönetimi</li>
+                        <li>Backlink analizi ve oluşturma</li>
+                        <li>Local SEO optimizasyonu</li>
+                    </ul>
+                    <a href="iletisim.html" class="btn" style="margin-top: 20px;">SEO Analizi Yaptırın</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Paketlerimiz</h2>
+                <p>İhtiyaçlarınıza uygun esnek paket seçeneklerimiz</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Başlangıç</h3>
+                        <div class="price">₺2.500</div>
+                        <div class="price-period">/ ay</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Google Ads Kampanya Yönetimi</li>
+                        <li>Haftalık Raporlama</li>
+                        <li>Aylık 5 Anahtar Kelime</li>
+                        <li>Reklam Metni Optimizasyonu</li>
+                        <li>Email Desteği</li>
+                    </ul>
+                    <a href="iletisim.html" class="btn">Paketi Seç</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="pricing-header">
+                        <h3>Profesyonel</h3>
+                        <div class="price">₺4.500</div>
+                        <div class="price-period">/ ay</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Google Ads + SEO Yönetimi</li>
+                        <li>Günlük Raporlama</li>
+                        <li>Aylık 15 Anahtar Kelime</li>
+                        <li>Reklam + İçerik Optimizasyonu</li>
+                        <li>7/24 Telefon Desteği</li>
+                    </ul>
+                    <a href="iletisim.html" class="btn btn-accent">Paketi Seç</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Kurumsal</h3>
+                        <div class="price">₺7.500</div>
+                        <div class="price-period">/ ay</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Tüm Dijital Pazarlama Hizmetleri</li>
+                        <li>Gerçek Zamanlı Raporlama</li>
+                        <li>Sınırsız Anahtar Kelime</li>
+                        <li>Özel Strateji Toplantıları</li>
+                        <li>Özel Hesap Yöneticisi</li>
+                    </ul>
+                    <a href="iletisim.html" class="btn">Paketi Seç</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="section-title">
+                <h2>Çalışma Sürecimiz</h2>
+                <p>Projelerinizi nasıl yönetiyoruz?</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Analiz & Planlama</h3>
+                    <p>İşletmenizi ve rakiplerinizi analiz edip, hedef kitlenize özel bir dijital pazarlama stratejisi oluşturuyoruz.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Kampanya Oluşturma</h3>
+                    <p>Google Ads, SEO veya sosyal medya kampanyalarınızı profesyonel şekilde tasarlayıp hayata geçiriyoruz.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Optimizasyon</h3>
+                    <p>Kampanyalarınızı sürekli takip edip performans analizleri yaparak en yüksek verimi almanızı sağlıyoruz.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Raporlama</h3>
+                    <p>Düzenli raporlarla kampanyalarınızın performansını takip edip, şeffaf bir iletişim sağlıyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sıkça Sorulan Sorular</h2>
+                <p>Hizmetlerimiz hakkında merak edilenler</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Google Ads reklamları ne kadar sürede sonuç verir?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Google Ads reklamları genellikle 24-48 saat içinde aktif olur ve trafik çekmeye başlar. Ancak optimizasyon süreci devam eder ve kampanyaların tam potansiyele ulaşması 2-4 hafta sürebilir.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>SEO çalışmaları ne kadar sürede etkisini gösterir?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SEO uzun vadeli bir stratejidir. İlk sonuçlar genellikle 3-6 ay içinde görülmeye başlanır. Tam potansiyele ulaşması ise 6-12 ay sürebilir. SEO çalışmalarının devamlılığı başarı için kritik öneme sahiptir.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Reklam bütçemi nasıl belirlemeliyim?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Reklam bütçeniz işletmenizin büyüklüğüne, sektörünüze, hedef kitlenize ve hedeflerinize göre değişiklik gösterir. Ücretsiz danışmanlığımız sırasında sizin için en uygun bütçeyi belirliyoruz.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Hangi ölçümleri takip ediyorsunuz?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tıklama sayısı (clicks), tıklama oranı (CTR), dönüşüm oranı (conversion rate), maliyet/dönüşüm (CPA), ROI (yatırım getirisi) gibi temel metrikleri ve sektörünüze özel KPI'ları takip ediyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Hizmet Almak İstiyorum</h2>
+                <p>Size özel teklifimiz için hemen iletişime geçin</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>İletişim Bilgilerimiz</h2>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Telefon</h3>
+                            <p>0545 194 40 26</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <p>0545 194 40 26</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>E-posta</h3>
+                            <p>info@webportal.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3>Çalışma Saatleri</h3>
+                            <p>Pazartesi - Cumartesi: 09:00 - 18:00</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Adınız Soyadınız</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Telefon Numaranız</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-posta Adresiniz</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">İlgilendiğiniz Hizmet</label>
+                            <select id="service" class="form-control" required>
+                                <option value="">Seçiniz</option>
+                                <option value="google-ads">Google Ads Yönetimi</option>
+                                <option value="seo">SEO Optimizasyonu</option>
+                                <option value="web-tasarim">Web Site Tasarımı</option>
+                                <option value="sosyal-medya">Sosyal Medya Yönetimi</option>
+                                <option value="diger">Diğer</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mesajınız</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-accent" style="width: 100%;">Teklif İste</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">WEBPORTAL</a>
+                    <p>Google Premier Partner sertifikalı reklam ajansı olarak, işletmelerin dijital pazarlama ve reklam ihtiyaçlarına profesyonel çözümler sunuyoruz.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Hızlı Bağlantılar</h3>
+                    <ul>
+                        <li><a href="index.html">Anasayfa</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
+                        <li><a href="portfolyo.html">Portfolyo</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h3>Hizmetlerimiz</h3>
+                    <ul>
+                        <li><a href="hizmetler.html">Google Reklam Yönetimi</a></li>
+                        <li><a href="hizmetler.html">SEO Optimizasyonu</a></li>
+                        <li><a href="hizmetler.html">Web Site Tasarımı</a></li>
+                        <li><a href="hizmetler.html">Sosyal Medya Yönetimi</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>İletişim Bilgileri</h3>
+                    <p><i class="fas fa-phone-alt"></i> 0545 194 40 26</p>
+                    <p><i class="fab fa-whatsapp"></i> 0545 194 40 26</p>
+                    <p><i class="fas fa-envelope"></i> info@webportal.com</p>
+                    <p><i class="fas fa-clock"></i> Pazartesi - Cumartesi: 09:00 - 18:00</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Webportal - Google Reklam Ajansı. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/905451944026" class="floating-btn whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:05451944026" class="floating-btn phone-btn">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    </div>
+
+    <script>
+        // Mobile Navigation Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileToggle.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would normally send the form data to a server
+            // For demo purposes, we'll just show an alert
+            alert(`Teşekkürler ${name}! ${service} hizmeti için teklif talebiniz alındı. En kısa sürede size 0545 194 40 26 numarasından dönüş yapacağız.`);
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // FAQ functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                // Close other open answers
+                document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                    if (otherAnswer !== answer && otherAnswer.classList.contains('active')) {
+                        otherAnswer.classList.remove('active');
+                        otherAnswer.previousElementSibling.querySelector('i').classList.remove('fa-chevron-up');
+                        otherAnswer.previousElementSibling.querySelector('i').classList.add('fa-chevron-down');
+                    }
+                });
+                
+                // Toggle current answer
+                answer.classList.toggle('active');
+                
+                // Toggle icon
+                if (answer.classList.contains('active')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
