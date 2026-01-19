@@ -3,7 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webportal - Google Reklam Ajansı</title>
+    <title>Webportal - Profesyonel Google Reklam & Dijital Pazarlama Ajansı</title>
+    <meta name="description" content="Google Ads, SEO, sosyal medya reklamları, web tasarımı ve dijital pazarlama çözümleri sunan lider reklam ajansı. 0545 194 40 26">
+    <meta name="keywords" content="google reklam ajansı, dijital pazarlama, google ads, seo, web tasarım, sosyal medya reklamları">
+    <meta name="author" content="Webportal Reklam Ajansı">
+    
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="Webportal - Profesyonel Google Reklam Ajansı">
+    <meta property="og:description" content="Google Ads, SEO, web tasarımı ve dijital pazarlama çözümleri">
+    <meta property="og:type" content="website">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.webportal.com.tr">
+    
+    <!-- Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Webportal Google Reklam Ajansı",
+        "description": "Google Ads, SEO, dijital pazarlama ve web tasarımı hizmetleri sunan profesyonel reklam ajansı",
+        "telephone": "+905451944026",
+        "email": "info@webportal.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "İstanbul",
+            "addressCountry": "TR"
+        },
+        "openingHours": "Mo-Sa 09:00-18:00",
+        "url": "https://www.webportal.com.tr",
+        "serviceType": "Digital Marketing Services"
+    }
+    </script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
     <style>
@@ -15,6 +47,7 @@
             --dark: #212529;
             --gray: #6c757d;
             --light-gray: #e9ecef;
+            --success: #4cc9f0;
             --gradient: linear-gradient(135deg, #4361ee, #3a0ca3);
             --gradient-accent: linear-gradient(135deg, #f72585, #b5179e);
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -116,6 +149,17 @@
 
         .btn-accent:hover {
             box-shadow: 0 15px 30px rgba(247, 37, 133, 0.25);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--gradient);
+            color: white;
         }
 
         /* Header Styles */
@@ -286,6 +330,220 @@
             font-size: 2rem;
         }
 
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 25px;
+            background: var(--light-gray);
+            border-radius: var(--radius);
+        }
+
+        .stat-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 10px;
+        }
+
+        /* Process Section */
+        .process {
+            padding: 100px 0;
+            background-color: var(--light-gray);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .step {
+            background: white;
+            border-radius: var(--radius);
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            box-shadow: var(--shadow);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .portfolio-item {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 250px;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .portfolio-info {
+            padding: 25px;
+            background: white;
+        }
+
+        /* Blog Section */
+        .blog {
+            padding: 100px 0;
+            background-color: var(--light-gray);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+        }
+
+        .blog-content {
+            padding: 25px;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 60px auto 0;
+            position: relative;
+        }
+
+        .testimonial-card {
+            background: var(--light-gray);
+            border-radius: var(--radius);
+            padding: 40px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 25px;
+            color: var(--dark);
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .client-avatar {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
         /* Contact Section */
         .contact {
             padding: 100px 0;
@@ -389,7 +647,7 @@
             color: #aaa;
         }
 
-        .footer-links h3, .footer-services h3 {
+        .footer-links h3, .footer-services h3, .footer-contact h3 {
             font-size: 1.3rem;
             margin-bottom: 25px;
             color: white;
@@ -414,12 +672,117 @@
             padding-left: 5px;
         }
 
+        .footer-contact p {
+            color: #aaa;
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: #333;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
         .copyright {
             text-align: center;
             padding-top: 30px;
             border-top: 1px solid #333;
             color: #aaa;
             font-size: 0.9rem;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 140px 0 40px;
+            background: var(--light-gray);
+        }
+
+        .breadcrumb-links {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .breadcrumb-links a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .breadcrumb-links a:hover {
+            color: var(--primary);
+        }
+
+        .breadcrumb-links span {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        /* Page Content */
+        .page-content {
+            padding: 60px 0 100px;
+        }
+
+        .page-container {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 60px;
+        }
+
+        .sidebar {
+            background: var(--light-gray);
+            padding: 30px;
+            border-radius: var(--radius);
+        }
+
+        .sidebar-widget {
+            margin-bottom: 40px;
+        }
+
+        .sidebar-widget h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .service-list, .blog-list {
+            list-style: none;
+        }
+
+        .service-list li, .blog-list li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .service-list a, .blog-list a {
+            color: var(--dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .service-list a:hover, .blog-list a:hover {
+            color: var(--primary);
+            padding-left: 5px;
         }
 
         /* Floating Buttons */
@@ -474,13 +837,13 @@
                 padding: 150px 0 100px;
             }
             
-            .hero-content {
+            .hero-content, .about-container, .contact-container {
                 grid-template-columns: 1fr;
                 text-align: center;
                 gap: 40px;
             }
             
-            .contact-container {
+            .page-container {
                 grid-template-columns: 1fr;
             }
         }
@@ -568,214 +931,346 @@
     <!-- Header & Navigation -->
     <header id="header">
         <div class="container header-container">
-            <a href="#" class="logo">WEBPORTAL</a>
+            <a href="index.html" class="logo">WEBPORTAL</a>
             
             <div class="mobile-toggle" id="mobileToggle">
                 <i class="fas fa-bars"></i>
             </div>
             
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home">Anasayfa</a></li>
-                <li><a href="#services">Hizmetlerimiz</a></li>
-                <li><a href="#contact">İletişim</a></li>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
+                <li><a href="portfolyo.html">Portfolyo</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
             </ul>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Google Reklam Ajansınız</h1>
-                    <p>Webportal olarak, işletmenizi dijital dünyada öne çıkarmak için profesyonel Google Ads reklam yönetimi, web site tasarımı ve marka kimliği oluşturma hizmetleri sunuyoruz.</p>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn">Hemen Teklif Al</a>
-                        <a href="#services" class="btn btn-accent">Hizmetlerimiz</a>
+    <!-- Main Content Area -->
+    <main id="main-content">
+        <!-- Hero Section (Homepage) -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Google Reklam Ajansınız</h1>
+                        <p>Webportal olarak, işletmenizi dijital dünyada öne çıkarmak için profesyonel Google Ads reklam yönetimi, web site tasarımı ve marka kimliği oluşturma hizmetleri sunuyoruz.</p>
+                        <div class="hero-buttons">
+                            <a href="iletisim.html" class="btn">Hemen Teklif Al</a>
+                            <a href="hizmetler.html" class="btn btn-accent">Hizmetlerimiz</a>
+                        </div>
                     </div>
-                </div>
-                <div class="hero-image">
-                    <div style="width: 100%; height: 350px; background: var(--gradient); border-radius: var(--radius); display: flex; align-items: center; justify-content: center;">
-                        <i class="fas fa-chart-line" style="font-size: 8rem; color: white; opacity: 0.8;"></i>
+                    <div class="hero-image">
+                        <div style="width: 100%; height: 350px; background: var(--gradient); border-radius: var(--radius); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-chart-line" style="font-size: 8rem; color: white; opacity: 0.8;"></i>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Hizmetlerimiz</h2>
-                <p>İşletmenizin dijital başarısı için kapsamlı çözümler sunuyoruz</p>
+        <!-- Services Section (Homepage) -->
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Hizmetlerimiz</h2>
+                    <p>İşletmenizin dijital başarısı için kapsamlı çözümler sunuyoruz</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-ad"></i>
+                        </div>
+                        <h3>Google Reklam Yönetimi</h3>
+                        <p>Google Ads platformunda arama, display, video ve shopping reklam kampanyaları oluşturuyor, yönetiyor ve optimize ediyoruz.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>SEO Optimizasyonu</h3>
+                        <p>Web sitenizin Google'da üst sıralarda çıkması için teknik, içerik ve backlink SEO çalışmaları yapıyoruz.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>Web Site Tasarımı</h3>
+                        <p>Modern, responsive ve SEO uyumlu web siteleri tasarlayarak dijital varlığınızı güçlendiriyoruz.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-hashtag"></i>
+                        </div>
+                        <h3>Sosyal Medya Yönetimi</h3>
+                        <p>Facebook, Instagram, LinkedIn ve Twitter reklamları ile sosyal medya hesaplarınızı profesyonelce yönetiyoruz.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h3>Reklam Analiz & Raporlama</h3>
+                        <p>Reklam performansınızı detaylı analiz edip düzenli raporlarla kampanyalarınızın verimliliğini artırıyoruz.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>Video Reklam Üretimi</h3>
+                        <p>YouTube ve sosyal medya platformları için etkili video reklam içerikleri hazırlıyoruz.</p>
+                    </div>
+                </div>
             </div>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-ad"></i>
-                    </div>
-                    <h3>Google Reklam Yönetimi</h3>
-                    <p>Google Ads platformunda arama, display, video ve shopping reklam kampanyaları oluşturuyor, yönetiyor ve optimize ediyoruz.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-map-marked-alt"></i>
-                    </div>
-                    <h3>Google Harita Reklamları</h3>
-                    <p>Google Haritalar ve Google My Business üzerinden lokal işletmenizi hedef kitleye ulaştıran reklam kampanyaları kuruyoruz.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3>Web Site Tasarımı</h3>
-                    <p>Modern, responsive ve SEO uyumlu web siteleri tasarlayarak dijital varlığınızı güçlendiriyoruz.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3>Logo & Marka Tasarımı</h3>
-                    <p>İşletmenizin kimliğini yansıtan profesyonel logo ve marka kimliği tasarımları oluşturuyoruz.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-pie"></i>
-                    </div>
-                    <h3>Reklam Analiz & Raporlama</h3>
-                    <p>Reklam performansınızı detaylı analiz edip düzenli raporlarla kampanyalarınızın verimliliğini artırıyoruz.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h3>Hedef Kitle Optimizasyonu</h3>
-                    <p>Doğru kitleye ulaşmak için hedefleme stratejileri geliştirerek reklam bütçenizin maksimum verimle kullanılmasını sağlıyoruz.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>İletişim</h2>
-                <p>Projeniz hakkında konuşmak için hemen iletişime geçin</p>
-            </div>
-            
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h2>Bizimle İletişime Geçin</h2>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div>
-                            <h3>Telefon</h3>
-                            <p>0545 194 40 26</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div>
-                            <h3>WhatsApp</h3>
-                            <p>0545 194 40 26</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h3>E-posta</h3>
-                            <p>info@webportal.com</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div>
-                            <h3>Çalışma Saatleri</h3>
-                            <p>Pazartesi - Cumartesi: 09:00 - 18:00</p>
-                        </div>
-                    </div>
+        <!-- About Section (Homepage) -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Neden Bizi Tercih Etmelisiniz?</h2>
+                    <p>10 yılı aşkın deneyimimizle dijital pazarlamanın her alanında hizmet veriyoruz</p>
                 </div>
                 
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Adınız Soyadınız</label>
-                            <input type="text" id="name" class="form-control" required>
-                        </div>
+                <div class="about-container">
+                    <div>
+                        <h3>Türkiye'nin Lider Google Reklam Ajansı</h3>
+                        <p>2013 yılından bu yana binlerce müşteriye dijital pazarlama çözümleri sunduk. Google Premier Partner sertifikalı ajansımız ile reklam bütçenizi en verimli şekilde kullanmanızı sağlıyoruz.</p>
+                        <p>Ekibimiz; Google Ads, SEO, web tasarımı ve sosyal medya pazarlaması konularında uzmanlaşmış profesyonellerden oluşmaktadır. Her projeyi kendi özelinde değerlendirip, işletmenizin ihtiyaçlarına özel stratejiler geliştiriyoruz.</p>
                         
-                        <div class="form-group">
-                            <label for="phone">Telefon Numaranız</label>
-                            <input type="tel" id="phone" class="form-control" required>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">500+</div>
+                                <p>Mutlu Müşteri</p>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">10+</div>
+                                <p>Yıllık Deneyim</p>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">1500+</div>
+                                <p>Tamamlanan Proje</p>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">98%</div>
+                                <p>Müşteri Memnuniyeti</p>
+                            </div>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="email">E-posta Adresiniz</label>
-                            <input type="email" id="email" class="form-control" required>
+                    </div>
+                    
+                    <div>
+                        <div style="width: 100%; height: 400px; background: var(--gradient); border-radius: var(--radius); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-trophy" style="font-size: 8rem; color: white; opacity: 0.8;"></i>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Mesajınız</label>
-                            <textarea id="message" class="form-control" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-accent" style="width: 100%;">Mesaj Gönder</button>
-                    </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Çalışma Sürecimiz</h2>
+                    <p>Projelerinizi nasıl yönetiyoruz?</p>
+                </div>
+                
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Analiz & Planlama</h3>
+                        <p>İşletmenizi ve rakiplerinizi analiz edip, hedef kitlenize özel bir dijital pazarlama stratejisi oluşturuyoruz.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Kampanya Oluşturma</h3>
+                        <p>Google Ads, SEO veya sosyal medya kampanyalarınızı profesyonel şekilde tasarlayıp hayata geçiriyoruz.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Optimizasyon</h3>
+                        <p>Kampanyalarınızı sürekli takip edip performans analizleri yaparak en yüksek verimi almanızı sağlıyoruz.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Raporlama</h3>
+                        <p>Düzenli raporlarla kampanyalarınızın performansını takip edip, şeffaf bir iletişim sağlıyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Müşteri Yorumları</h2>
+                    <p>Bizimle çalışan müşterilerimizin görüşleri</p>
+                </div>
+                
+                <div class="testimonial-slider">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "Webportal ekibi ile çalışmaya başladıktan sonra online satışlarımız %300 arttı. Google reklam kampanyalarını profesyonelce yönetiyorlar ve her ay düzenli rapor sunuyorlar. Kesinlikle tavsiye ediyorum."
+                        </div>
+                        <div class="client-info">
+                            <div class="client-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h4>Ahmet Yılmaz</h4>
+                                <p>E-ticaret Mağaza Sahibi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section (Homepage) -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>İletişim</h2>
+                    <p>Projeniz hakkında konuşmak için hemen iletişime geçin</p>
+                </div>
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h2>Bizimle İletişime Geçin</h2>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h3>Telefon</h3>
+                                <p>0545 194 40 26</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h3>WhatsApp</h3>
+                                <p>0545 194 40 26</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3>E-posta</h3>
+                                <p>info@webportal.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h3>Çalışma Saatleri</h3>
+                                <p>Pazartesi - Cumartesi: 09:00 - 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Adınız Soyadınız</label>
+                                <input type="text" id="name" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Telefon Numaranız</label>
+                                <input type="tel" id="phone" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">E-posta Adresiniz</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Mesajınız</label>
+                                <textarea id="message" class="form-control" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-accent" style="width: 100%;">Mesaj Gönder</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-container">
                 <div class="footer-about">
-                    <a href="#" class="footer-logo">WEBPORTAL</a>
-                    <p>Google Reklam Ajansı olarak, işletmelerin dijital pazarlama ve reklam ihtiyaçlarına profesyonel çözümler sunuyoruz. Google Ads, web tasarımı ve marka kimliği oluşturma konularında uzman ekibimizle hizmetinizdeyiz.</p>
+                    <a href="index.html" class="footer-logo">WEBPORTAL</a>
+                    <p>Google Premier Partner sertifikalı reklam ajansı olarak, işletmelerin dijital pazarlama ve reklam ihtiyaçlarına profesyonel çözümler sunuyoruz. Google Ads, SEO, web tasarımı ve sosyal medya yönetimi konularında uzman ekibimizle hizmetinizdeyiz.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
                 
                 <div class="footer-links">
                     <h3>Hızlı Bağlantılar</h3>
                     <ul>
-                        <li><a href="#home">Anasayfa</a></li>
-                        <li><a href="#services">Hizmetlerimiz</a></li>
-                        <li><a href="#contact">İletişim</a></li>
+                        <li><a href="index.html">Anasayfa</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
+                        <li><a href="portfolyo.html">Portfolyo</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-services">
                     <h3>Hizmetlerimiz</h3>
                     <ul>
-                        <li><a href="#services">Google Reklam Yönetimi</a></li>
-                        <li><a href="#services">Harita Reklamları</a></li>
-                        <li><a href="#services">Web Site Tasarımı</a></li>
-                        <li><a href="#services">Logo Tasarımı</a></li>
+                        <li><a href="hizmetler.html">Google Reklam Yönetimi</a></li>
+                        <li><a href="hizmetler.html">SEO Optimizasyonu</a></li>
+                        <li><a href="hizmetler.html">Web Site Tasarımı</a></li>
+                        <li><a href="hizmetler.html">Sosyal Medya Yönetimi</a></li>
+                        <li><a href="hizmetler.html">Marka Kimliği Tasarımı</a></li>
+                        <li><a href="hizmetler.html">Video Reklam Üretimi</a></li>
                     </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>İletişim Bilgileri</h3>
+                    <p><i class="fas fa-phone-alt"></i> 0545 194 40 26</p>
+                    <p><i class="fab fa-whatsapp"></i> 0545 194 40 26</p>
+                    <p><i class="fas fa-envelope"></i> info@webportal.com</p>
+                    <p><i class="fas fa-clock"></i> Pazartesi - Cumartesi: 09:00 - 18:00</p>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Webportal - Google Reklam Ajansı. Tüm hakları saklıdır.</p>
+                <p>&copy; 2023 Webportal - Google Reklam Ajansı. Tüm hakları saklıdır. | <a href="gizlilik.html" style="color: #aaa;">Gizlilik Politikası</a> | <a href="kullanim.html" style="color: #aaa;">Kullanım Koşulları</a></p>
             </div>
         </div>
     </footer>
@@ -855,6 +1350,54 @@
                 }
             });
         });
+
+        // Initialize testimonial slider
+        let currentTestimonial = 0;
+        const testimonials = [
+            {
+                text: "Webportal ekibi ile çalışmaya başladıktan sonra online satışlarımız %300 arttı. Google reklam kampanyalarını profesyonelce yönetiyorlar ve her ay düzenli rapor sunuyorlar. Kesinlikle tavsiye ediyorum.",
+                name: "Ahmet Yılmaz",
+                position: "E-ticaret Mağaza Sahibi"
+            },
+            {
+                text: "SEO çalışmaları için Webportal'ı tercih ettik. 6 ay içinde anahtar kelimelerimizde ilk sayfaya çıktık ve organik trafiğimiz %400 arttı. Profesyonel ekibleri ile her zaman yanımızdalar.",
+                name: "Ayşe Demir",
+                position: "Hizmet Sektörü İşletme Sahibi"
+            },
+            {
+                text: "Yeni bir web sitesi ve Google reklam kampanyaları için Webportal ile çalıştık. Hem tasarım hem de dijital pazarlama konusunda beklentilerimizin üzerinde hizmet aldık. Müşteri memnuniyeti odaklı yaklaşımları takdire şayan.",
+                name: "Mehmet Kaya",
+                position: "Restoran Sahibi"
+            }
+        ];
+
+        function updateTestimonial() {
+            const testimonialCard = document.querySelector('.testimonial-card');
+            if (testimonialCard) {
+                testimonialCard.innerHTML = `
+                    <div class="testimonial-text">
+                        "${testimonials[currentTestimonial].text}"
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4>${testimonials[currentTestimonial].name}</h4>
+                            <p>${testimonials[currentTestimonial].position}</p>
+                        </div>
+                    </div>
+                `;
+                
+                currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            }
+        }
+
+        // Change testimonial every 10 seconds
+        setInterval(updateTestimonial, 10000);
+
+        // Update testimonial immediately on page load
+        document.addEventListener('DOMContentLoaded', updateTestimonial);
     </script>
 </body>
 </html>
